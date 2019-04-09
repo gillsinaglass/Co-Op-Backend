@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :find_user, only: [:update]
+  before_action :find_user, only: [:update, :show]
 
   def index
     @users = User.all
@@ -9,6 +9,10 @@ class UsersController < ApplicationController
   def create
       @user = User.create!(user_params)
       render json: @user
+  end
+
+  def show
+    render json: @user
   end
 
   def update

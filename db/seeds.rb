@@ -7,15 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Users
-User.destroy_all
-Skill.destroy_all
-Collaboration.destroy_all
-Work.destroy_all
-Team.destroy_all
-UserSkill.destroy_all
-WorkSkill.destroy_all
-
-
 
 ryan = User.create(name: "Ryan", email: "rdgill95@gmail.com", profile_picture: "https://www.facebook.com/photo.php?fbid=10215782449468165&set=a.1518396333824&type=3&source=11&referrer_profile_id=1651994391", job_title: "Developer", user_bio: "Looking for a job", git_hub: "https://github.com/gillsinaglass", cover_image: "https://scontent-iad3-1.xx.fbcdn.net/v/t31.0-8/17240262_10211152534963196_7657082779556508117_o.jpg?_nc_cat=111&_nc_ht=scontent-iad3-1.xx&oh=0ab8e395fa8a4e718c215c44760ad72d&oe=5D3CD853")
 
