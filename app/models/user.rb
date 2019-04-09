@@ -4,4 +4,8 @@ class User < ApplicationRecord
   has_many :teams
   has_many :works, through: :teams
   has_many :collaborations, through: :works
+
+  def collaborations_uniq
+    self.collaborations.uniq
+  end
 end

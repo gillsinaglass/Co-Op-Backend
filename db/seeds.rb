@@ -8,7 +8,7 @@
 
 # Users
 
-ryan = User.create(name: "Ryan", email: "rdgill95@gmail.com", profile_picture: "https://www.facebook.com/photo.php?fbid=10215782449468165&set=a.1518396333824&type=3&source=11&referrer_profile_id=1651994391", job_title: "Developer", user_bio: "Looking for a job", git_hub: "https://github.com/gillsinaglass", cover_image: "https://scontent-iad3-1.xx.fbcdn.net/v/t31.0-8/17240262_10211152534963196_7657082779556508117_o.jpg?_nc_cat=111&_nc_ht=scontent-iad3-1.xx&oh=0ab8e395fa8a4e718c215c44760ad72d&oe=5D3CD853")
+ryan = User.create(name: "Ryan", email: "rdgill95@gmail.com", profile_picture: "https://media.npr.org/assets/artslife/arts/2010/12/best-movies-of-2010/ryan-gosling-film-de4259b4abc784e312a677e5b48132ff6b2d8590-s800-c15.jpg", job_title: "Developer", user_bio: "Looking for a job", git_hub: "https://github.com/gillsinaglass", cover_image: "https://scontent-iad3-1.xx.fbcdn.net/v/t31.0-8/17240262_10211152534963196_7657082779556508117_o.jpg?_nc_cat=111&_nc_ht=scontent-iad3-1.xx&oh=0ab8e395fa8a4e718c215c44760ad72d&oe=5D3CD853")
 
 kyle = User.create(name: "Kyle", email: "Kylel95@gmail.com", profile_picture: "https://images.sk-static.com/images/media/profile_images/artists/4634/huge_avatar", job_title: "Designer", user_bio: "Have A Job", git_hub: "https://github.com/gillsinaglass")
 
@@ -20,16 +20,21 @@ photoshop = Skill.create(skill_name: "Photoshop", category: "Design")
 
 
 # Collaboration
-collaboration1 = Collaboration.create(name: "Collab 1", description: "Seed Collab one", git_hub: "google.com", user_id: ryan.id)
+collaboration1 = Collaboration.create(name: "Collab 1", description: "Seed Collab one", git_hub: "google.com", user_id: ryan.id, status:"Active", image_one: "https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2017/06/02/Photos/Opinion/oped1-kN3D--621x414@LiveMint.jpg")
+collaboration2 = Collaboration.create(name: "Collab 2", description: "Seed Collab two", git_hub: "facebook.com", user_id: ryan.id, status:"Active", image_one: "https://www.investorsgroup.com/content/dam/investorsgroup/more/2016/10/IG_working_from_home.jpg")
 
 # Work
 work1 = Work.create(work_title: "Work 1", description: "First Seed Work", collaboration_id: collaboration1.id, estimated_time: 6, priority: "high", status: "Pending")
-work2 = Work.create(work_title: "Work 2", description: "Second Seed Work", collaboration_id: collaboration1.id, estimated_time: 4, priority: "low", status: "Pending")
-work3 = Work.create(work_title: "Work 3", description: "Third Seed Work", collaboration_id: collaboration1.id, estimated_time: 4, priority: "low", status: "Done")
+work2 = Work.create(work_title: "Work 2", description: "Second Seed Work", collaboration_id: collaboration2.id, estimated_time: 4, priority: "low", status: "Pending")
+work3 = Work.create(work_title: "Work 3", description: "Third Seed Work", collaboration_id: collaboration2.id, estimated_time: 4, priority: "low", status: "Done")
 
 #Team
 team1 = Team.create(user_id: ryan.id, work_id: work1.id)
 team2 = Team.create(user_id: kyle.id, work_id: work1.id)
+team3 = Team.create(user_id: ryan.id, work_id: work2.id)
+team4 = Team.create(user_id: kyle.id, work_id: work2.id)
+team5 = Team.create(user_id: ryan.id, work_id: work3.id)
+team6 = Team.create(user_id: kyle.id, work_id: work3.id)
 
 # UserSkills
 UserSkill.create(user_id: ryan.id, skill_id: ruby.id)
