@@ -3,7 +3,7 @@ class WorksController < ApplicationController
 
   def index
     @works = Work.all
-    render json: @works
+    render json: @works 
   end
 
   def create
