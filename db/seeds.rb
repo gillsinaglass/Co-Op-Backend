@@ -29,12 +29,12 @@ work2 = Work.create(work_title: "Work 2", description: "Second Seed Work", colla
 work3 = Work.create(work_title: "Work 3", description: "Third Seed Work", collaboration_id: collaboration2.id, estimated_time: 4, priority: "low", status: "Done")
 
 #Team
-team1 = Team.create(user_id: ryan.id, work_id: work1.id)
-team2 = Team.create(user_id: kyle.id, work_id: work1.id)
-team3 = Team.create(user_id: ryan.id, work_id: work2.id)
-team4 = Team.create(user_id: kyle.id, work_id: work2.id)
-team5 = Team.create(user_id: ryan.id, work_id: work3.id)
-team6 = Team.create(user_id: kyle.id, work_id: work3.id)
+team1 = Team.create(user_id: ryan.id, work_id: work1.id, team_name: "Team1")
+team2 = Team.create(user_id: kyle.id, work_id: work1.id, team_name: "Team2")
+team3 = Team.create(user_id: ryan.id, work_id: work2.id, team_name: "Team3")
+team4 = Team.create(user_id: kyle.id, work_id: work2.id, team_name: "Team4")
+team5 = Team.create(user_id: ryan.id, work_id: work3.id, team_name: "Team5")
+team6 = Team.create(user_id: kyle.id, work_id: work3.id, team_name: "Team6")
 
 # UserSkills
 UserSkill.create(user_id: ryan.id, skill_id: ruby.id)
