@@ -3,12 +3,16 @@ class WorksController < ApplicationController
 
   def index
     @works = Work.all
-    render json: @works 
+    render json: @works
   end
 
   def create
       @work = Work.create!(work_params)
       render json: @work
+  end
+
+  def show
+    render json: @work
   end
 
   def update

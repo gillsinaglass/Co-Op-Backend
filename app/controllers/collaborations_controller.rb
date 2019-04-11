@@ -1,5 +1,5 @@
 class CollaborationsController < ApplicationController
-  before_action :find_collaboration, only: [:update]
+  before_action :find_collaboration, only: [:update, :show]
 
   def index
     @collaborations = Collaboration.all
@@ -9,6 +9,10 @@ class CollaborationsController < ApplicationController
   def create
       @collaboration = Collaboration.create!(collaboration_params)
       render json: @collaboration
+  end
+
+  def show
+    render json: @collaboration
   end
 
   def update
