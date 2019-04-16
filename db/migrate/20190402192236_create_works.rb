@@ -12,6 +12,9 @@ class CreateWorks < ActiveRecord::Migration[5.2]
       t.string :image_three
       t.string :video_url
       t.string :git_hub
+      t.integer :owner
+      t.integer :designer
+      t.integer :developer
 
       t.timestamps
     end

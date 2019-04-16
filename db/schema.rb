@@ -85,6 +85,9 @@ ActiveRecord::Schema.define(version: 2019_04_02_192629) do
     t.string "image_three"
     t.string "video_url"
     t.string "git_hub"
+    t.integer "owner"
+    t.integer "designer"
+    t.integer "developer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

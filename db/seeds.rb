@@ -24,7 +24,7 @@ collaboration1 = Collaboration.create(name: "Collab 1", description: "Seed Colla
 collaboration2 = Collaboration.create(name: "Collab 2", description: "Seed Collab two", git_hub: "facebook.com", user_id: ryan.id, status:"Active", image_one: "https://www.investorsgroup.com/content/dam/investorsgroup/more/2016/10/IG_working_from_home.jpg")
 
 # Work
-work1 = Work.create(work_title: "Work 1", description: "First Seed Work", collaboration_id: collaboration1.id, estimated_time: 6, priority: "high", status: "Pending")
+work1 = Work.create(work_title: "Work 1", description: "First Seed Work", collaboration_id: collaboration1.id, estimated_time: 6, priority: "high", status: "Pending", owner: ryan.id, designer: kyle.id, developer: ryan.id)
 work2 = Work.create(work_title: "Work 2", description: "Second Seed Work", collaboration_id: collaboration2.id, estimated_time: 4, priority: "low", status: "Pending")
 work3 = Work.create(work_title: "Work 3", description: "Third Seed Work", collaboration_id: collaboration2.id, estimated_time: 4, priority: "low", status: "Done")
 
