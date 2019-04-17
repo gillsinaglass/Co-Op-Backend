@@ -3,6 +3,6 @@ class UserSerializer < ActiveModel::Serializer
   # Custom method found in user model for uniq array
    :collaborations_uniq
    has_many :works, serializer: WorkSerializer
-
+   has_many :tasks, serializer: TaskSerializer
 
 end

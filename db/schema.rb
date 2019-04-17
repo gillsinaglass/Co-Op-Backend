@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2019_04_16_195118) do
     t.string "image_two"
     t.string "image_three"
     t.string "video"
-    t.datetime "created_at", null: false
+    t.datetime.strftime("%Y-%m-%d") "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
