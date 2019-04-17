@@ -1,7 +1,7 @@
 class Collaboration < ApplicationRecord
   has_many :works
-  has_many :teams, through: :works
-  has_many :users, through: :teams
+  has_many :tasks, through: :works
+  has_many :users, through: :tasks
   belongs_to :user
 
   def users_uniq

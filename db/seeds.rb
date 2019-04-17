@@ -24,17 +24,24 @@ collaboration1 = Collaboration.create(name: "Collab 1", description: "Seed Colla
 collaboration2 = Collaboration.create(name: "Collab 2", description: "Seed Collab two", git_hub: "facebook.com", user_id: ryan.id, status:"Active", image_one: "https://www.investorsgroup.com/content/dam/investorsgroup/more/2016/10/IG_working_from_home.jpg")
 
 # Work
-work1 = Work.create(work_title: "Work 1", description: "First Seed Work", collaboration_id: collaboration1.id, estimated_time: 6, priority: "high", status: "Pending", owner: ryan.id, designer: kyle.id, developer: ryan.id)
-work2 = Work.create(work_title: "Work 2", description: "Second Seed Work", collaboration_id: collaboration2.id, estimated_time: 4, priority: "low", status: "Pending")
-work3 = Work.create(work_title: "Work 3", description: "Third Seed Work", collaboration_id: collaboration2.id, estimated_time: 4, priority: "low", status: "Done")
+work1 = Work.create(work_title: "Work 1", description: "First Seed Work", collaboration_id: collaboration1.id)
+work4 = Work.create(work_title: "Work 4", description: "Fourth Seed Work", collaboration_id: collaboration1.id)
+work2 = Work.create(work_title: "Work 2", description: "Second Seed Work", collaboration_id: collaboration2.id)
+work3 = Work.create(work_title: "Work 3", description: "Third Seed Work", collaboration_id: collaboration2.id)
 
-#Team
-team1 = Team.create(user_id: ryan.id, work_id: work1.id, team_name: "Team1")
-team2 = Team.create(user_id: kyle.id, work_id: work1.id, team_name: "Team2")
-team3 = Team.create(user_id: ryan.id, work_id: work2.id, team_name: "Team3")
-team4 = Team.create(user_id: kyle.id, work_id: work2.id, team_name: "Team4")
-team5 = Team.create(user_id: ryan.id, work_id: work3.id, team_name: "Team5")
-team6 = Team.create(user_id: kyle.id, work_id: work3.id, team_name: "Team6")
+#Task
+task1 = Task.create(user_id: ryan.id, work_id: work1.id, description: "This is to build out something cool", status: "Pending", estimated_time: 3, priority: "High")
+task2 = Task.create(user_id: kyle.id, work_id: work1.id, description: "This is to build out something great", status: "Done", estimated_time: 5, priority: "Medium")
+task3= Task.create(user_id: ryan.id, work_id: work1.id, description: "This is to build out something fun", status: "Not Started", estimated_time: 5, priority: "Low")
+task4 = Task.create(user_id: kyle.id, work_id: work2.id, description: "This is to build out something cool", status: "Pending", estimated_time: 3, priority: "High")
+task5 = Task.create(user_id: ryan.id, work_id: work2.id, description: "This is to build out something cool", status: "Done", estimated_time: 5, priority: "Medium")
+task6 = Task.create(user_id: kyle.id, work_id: work3.id, description: "This is to build out something cool", status: "Pending", estimated_time: 3, priority: "High")
+task7 = Task.create(user_id: ryan.id, work_id: work3.id, description: "This is to build out something cool", status: "Not Started", estimated_time: 5, priority: "Low")
+task8 = Task.create(user_id: kyle.id, work_id: work3.id, description: "This is to build out something cool", status: "Done", estimated_time: 5, priority: "High")
+task9 = Task.create(user_id: ryan.id, work_id: work4.id, description: "This is to build out something cool", status: "Pending", estimated_time: 7, priority: "Medium")
+task10 = Task.create(user_id: kyle.id, work_id: work4.id, description: "This is to build out something cool", status: "Not Started", estimated_time: 7, priority: "High")
+task11 = Task.create(user_id: ryan.id, work_id: work4.id, description: "This is to build out something cool", status: "Pending", estimated_time: 3, priority: "Low")
+task12 = Task.create(user_id: ryan.id, work_id: work4.id, description: "This is to build out something cool", status: "Done", estimated_time: 7, priority: "Medium")
 
 # UserSkills
 UserSkill.create(user_id: ryan.id, skill_id: ruby.id)

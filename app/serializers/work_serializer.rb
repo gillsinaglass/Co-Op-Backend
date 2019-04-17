@@ -1,4 +1,5 @@
 class WorkSerializer < ActiveModel::Serializer
-  attributes :work_title, :description, :collaboration, :estimated_time, :priority, :status, :image_one, :image_two, :image_three, :video_url, :teams, :users
+  attributes :id, :work_title, :description, :collaboration, :estimated_time, :priority, :status, :tasks, :users_uniq
   # Custom method found in user model for uniq array
+  has_many :tasks, serializer: TaskSerializer
 end

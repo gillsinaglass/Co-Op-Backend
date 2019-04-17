@@ -1,5 +1,5 @@
 class WorksController < ApplicationController
-  before_action :find_work, only: [:update]
+  before_action :find_work, only: [:update, :show]
 
   def index
     @works = Work.all
